@@ -158,3 +158,9 @@ hitPipe: function() {
 }, 
     if (this.bird.alive == false)
     return;
+
+game.load.audio('jump', 'assets/jump.wav'); 
+
+this.jumpSound = game.add.audio('jump'); 
+
+this.jumpSound.play();
