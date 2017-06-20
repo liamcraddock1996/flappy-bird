@@ -3,6 +3,6 @@
 ### 2017
 flappy-bird is a Phaser game engine production by Liam Craddock.
 
-The live game can be viewed [here](https://github.com/liamcraddock1996/flappy-bird-game.git).
+The live game can be viewed [here](liamcraddock1996.github.io/flappy-bird-game/).
 
 Read the user manual [here](#).
