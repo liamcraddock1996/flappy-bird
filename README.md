@@ -1,6 +1,5 @@
 # flappy-bird
 
-# flappy-bird
 ### 2017
 Rocket Blaster is a Phaser game engine production by Liam Craddock.
 
