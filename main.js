@@ -36,6 +36,12 @@ this.bird.body.gravity.y = 1000;
 var spaceBar = game.input.keyboard.addKey(
 Phaser.Keyboard.SPACEBAR);
 spaceBar.onDown.add(this.jump, this);
+    
+//Score
+this.score = 0;
+this.labelScore = game.add.text(20, 20, "0",
+
+{ font: "30px Arial", fill: "#ffffff" });
 },
 
 //Timer for pipes
@@ -63,6 +69,10 @@ this.bird.body.velocity.y = -350;
 restartGame: function() {
 //Start the 'main' state, which restarts the game
 game.state.start('main');
+    
+//calls the restartGame function each time the bird dies
+game.physics.arcade.overlap(this.bird, this.pipes, this.restartGame,
+null, this);
 },
     
 //Adds a pipe
@@ -80,6 +90,10 @@ var hole = Math.floor(Math.random() * 5) + 1;
 for (var i = 0; i < 8; i++)
 if (i != hole && i != hole + 1)
 this.addOnePipe(400, i * 60 + 10);
+    
+//Increases score as new pipes are created
+this.score += 1;
+this.labelScore.text = this.score;
 },
 
 //Create a pipe at the position x and y
@@ -98,6 +112,8 @@ pipe.body.velocity.x = -200;
 pipe.checkWorldBounds = true;
 pipe.outOfBoundsKill = true;
 },
+   
+
     
 
 
