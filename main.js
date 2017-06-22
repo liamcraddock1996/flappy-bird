@@ -64,7 +64,7 @@ restartGame: function() {
 //Start the 'main' state, which restarts the game
 game.state.start('main');
 },
-
+    
 //Adds a pipe
 addOnePipe: function(x, y) {
 
@@ -98,8 +98,8 @@ pipe.body.velocity.x = -200;
 pipe.checkWorldBounds = true;
 pipe.outOfBoundsKill = true;
 },
+    
 
-};
 
 // Initialize Phaser, and create a 400px by 490px game
 var game = new Phaser.Game(400, 490);
@@ -109,3 +109,5 @@ game.state.add('main', mainState);
 
 // Start the state to actually start the game
 game.state.start('main');
+    
+};
