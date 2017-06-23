@@ -7,8 +7,10 @@ preload: function() {
 // This function will be executed at the beginning
 // That's where we load the images and sounds
 //Load the bird sprite
-game.load.image('bird', 'assets/bird.png');
-game.load.image('pipe', 'assets/pipe.png');
+game.load.image('bird', 'assets/red flappy bird.png');
+//I have changed the colour of the bird from yellow to red
+game.load.image('pipe', 'assets/blue pipe.png');
+//I have changed the colour of the pipe from green to blue
 game.load.audio('jump', 'assets/jump.wav');
 },
     
@@ -17,7 +19,8 @@ create: function() {
 // Here we set up the game, display sprites, etc.
 //Change the background colour of the game to blue - for now!
     
-game.stage.backgroundColor = '#71c5cf'; 
+game.stage.backgroundColor = '#ffff00'; 
+//Here I have changed the background colour from blue to yellow  
     
 //Set the physics system
 game.physics.startSystem(Phaser.Physics.ARCADE);
@@ -43,8 +46,8 @@ spaceBar.onDown.add(this.jump, this);
 this.score = 0;
 this.labelScore = game.add.text(20, 20, "0",
                                 
-
-{ font: "30px Arial", fill: "#ffffff" });
+//Here I have changed the font colour from white to black so its visible on a yellow background
+{ font: "30px Arial", fill: "#000000" });
 },
     
 //Add the sound to the game
