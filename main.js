@@ -6,7 +6,6 @@ preload: function() {
 
 // This function will be executed at the beginning
 // That's where we load the images and sounds
-preload: function() {
 //Load the bird sprite
 game.load.image('bird', 'assets/bird.png');
 game.load.image('pipe', 'assets/pipe.png');
@@ -161,7 +160,7 @@ pipe.checkWorldBounds = true;
 pipe.outOfBoundsKill = true;
 },
    
-
+};
     
 
 
@@ -174,4 +173,4 @@ game.state.add('main', mainState);
 // Start the state to actually start the game
 game.state.start('main');
     
-};
+
